@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Umar | Backend Engineer</title>
+    <meta charset="UTF-8" />
+    <title>Umar Farooq | Backend Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <h1>Hi, I’m Umar 👋</h1>
-    <p>Senior Backend Engineer</p>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Umar Farooq</h1>
+        <h2>Senior Backend Engineer</h2>
+        <p>
+          Designing high-performance backend systems with Go, Kafka, and
+          distributed architectures.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects">View Projects</a>
+          <a href="#contact" class="secondary">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h3>About Me</h3>
+      <p>
+        Backend-focused engineer with 4+ years of experience building scalable,
+        event-driven systems in fintech and platform environments. I care deeply
+        about performance, correctness, and system behavior under load.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Core Skills</h3>
+      <div class="skills">
+        <span>Go (Golang)</span>
+        <span>Kafka</span>
+        <span>PostgreSQL</span>
+        <span>Redis</span>
+        <span>Microservices</span>
+        <span>AWS</span>
+        <span>Docker</span>
+        <span>Kubernetes</span>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h3>Projects</h3>
+
+      <div class="cards">
+        <div class="card">
+          <h4>Order Matching Engine</h4>
+          <p>
+            Go-based high-throughput matching engine with WAL, snapshotting, and
+            low-latency order processing.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Event-Driven Platform</h4>
+          <p>
+            Kafka-powered microservices platform designed for scalability,
+            resilience, and asynchronous workflows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Writing</h3>
+      <a
+        class="link"
+        href="https://medium.com/@umarfarooq.waheed/the-orm-trap-how-a-go-backend-slowly-turned-againainst-us-part-1-62c48ad1c8fe"
+        target="_blank"
+      >
+        The ORM Trap – How a Go Backend Slowly Turned Against Us →
+      </a>
+    </section>
+
+    <section class="section" id="contact">
+      <h3>Contact</h3>
+      <p>Email: umar@example.com</p>
+      <p>
+        <a href="https://github.com/UmarFarooq-MP">GitHub</a> ·
+        <a href="https://linkedin.com">LinkedIn</a>
+      </p>
+    </section>
+
+    <footer>© 2026 Umar Farooq</footer>
   </body>
 </html>
