@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <title>Umar Farooq | Backend Engineer</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Umar Farooq | Senior Backend Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <header class="hero">
-      <div class="hero-content">
-        <h1>Umar Farooq</h1>
-        <h2>Senior Backend Engineer</h2>
-        <p>
-          Designing high-performance backend systems with Go, Kafka, and
-          distributed architectures.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projects">View Projects</a>
-          <a href="#contact" class="secondary">Contact</a>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- TERMINAL HERO -->
+<header class="hero">
+    <div class="terminal">
+        <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="title">umar@backendumar:~</span>
         </div>
-      </div>
-    </header>
 
-    <section class="section">
-      <h3>About Me</h3>
-      <p>
-        Backend-focused engineer with 4+ years of experience building scalable,
-        event-driven systems in fintech and platform environments. I care deeply
-        about performance, correctness, and system behavior under load.
-      </p>
-    </section>
+        <div class="terminal-body">
+            <pre id="terminal-output"></pre><span class="cursor">█</span>
+        </div>
+    </div>
+</header>
 
-    <section class="section">
-      <h3>Core Skills</h3>
-      <div class="skills">
+<!-- ABOUT -->
+<section class="section fade-up">
+    <h3>About Me</h3>
+    <p>
+        I’m a backend-focused software engineer with 4+ years of experience
+        building scalable, event-driven systems in fintech and platform environments.
+    </p>
+    <p>
+        I enjoy working close to system fundamentals — performance, consistency,
+        and failure modes — not just shipping CRUD APIs.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section class="section fade-up">
+    <h3>Core Skills</h3>
+    <div class="skills">
         <span>Go (Golang)</span>
         <span>Kafka</span>
         <span>PostgreSQL</span>
@@ -42,51 +49,148 @@
         <span>AWS</span>
         <span>Docker</span>
         <span>Kubernetes</span>
-      </div>
-    </section>
+        <span>Distributed Systems</span>
+    </div>
+</section>
 
-    <section class="section" id="projects">
-      <h3>Projects</h3>
+<!-- EXPERIENCE -->
+<section class="section fade-up">
+    <h3>Experience</h3>
 
-      <div class="cards">
-        <div class="card">
-          <h4>Order Matching Engine</h4>
-          <p>
-            Go-based high-throughput matching engine with WAL, snapshotting, and
-            low-latency order processing.
-          </p>
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <span class="dot"></span>
+            <div class="content">
+                <h4>Senior Backend Engineer — Emumba</h4>
+                <p class="time">2022 – 2025</p>
+                <p>
+                    Built high-throughput backend systems for a crypto-exchange.
+                    Designed Kafka pipelines, order processing services,
+                    and low-latency Go microservices.
+                </p>
+            </div>
         </div>
 
-        <div class="card">
-          <h4>Event-Driven Platform</h4>
-          <p>
-            Kafka-powered microservices platform designed for scalability,
-            resilience, and asynchronous workflows.
-          </p>
+        <div class="timeline-item">
+            <span class="dot"></span>
+            <div class="content">
+                <h4>Backend Engineer — Quecko</h4>
+                <p class="time">2020 – 2022</p>
+                <p>
+                    Developed event-driven microservices, API integrations,
+                    and scalable backend workflows.
+                </p>
+            </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <h3>Writing</h3>
-      <a
-        class="link"
-        href="https://medium.com/@umarfarooq.waheed/the-orm-trap-how-a-go-backend-slowly-turned-againainst-us-part-1-62c48ad1c8fe"
-        target="_blank"
-      >
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section fade-up" id="projects">
+    <h3>Projects</h3>
+
+    <div class="cards">
+
+        <div class="card project">
+            <img src="assets/projects/orderbook.png" alt="Order Matching Engine">
+            <h4>Order Matching Engine</h4>
+            <p>
+                High-performance Go-based matching engine with WAL,
+                snapshotting, and low-latency order processing.
+            </p>
+        </div>
+
+        <div class="card project">
+            <img src="assets/projects/kafka.png" alt="Event Driven Platform">
+            <h4>Event-Driven Platform</h4>
+            <p>
+                Kafka-powered microservices platform designed for scalability,
+                resilience, and asynchronous workflows.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- WRITING -->
+<section class="section fade-up">
+    <h3>Writing</h3>
+    <a class="link"
+       href="https://medium.com/@umarfarooq.waheed/the-orm-trap-how-a-go-backend-slowly-turned-against-us-part-1-62c48ad1c8fe"
+       target="_blank">
         The ORM Trap – How a Go Backend Slowly Turned Against Us →
-      </a>
-    </section>
+    </a>
+</section>
 
-    <section class="section" id="contact">
-      <h3>Contact</h3>
-      <p>Email: umar@example.com</p>
-      <p>
+<!-- CONTACT -->
+<section class="section fade-up" id="contact">
+    <h3>Contact</h3>
+    <p>Email: umar@example.com</p>
+    <p>
         <a href="https://github.com/UmarFarooq-MP">GitHub</a> ·
         <a href="https://linkedin.com">LinkedIn</a>
-      </p>
-    </section>
+    </p>
+</section>
 
-    <footer>© 2026 Umar Farooq</footer>
-  </body>
+<footer>
+    © 2026 Umar Farooq · backendumar.com
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+    /* TERMINAL TYPEWRITER */
+    const lines = [
+        "umar@backendumar:~$ whoami",
+        "Umar Farooq — Senior Backend Engineer",
+        "",
+        "umar@backendumar:~$ skills",
+        "- Go (Golang)",
+        "- Kafka / Event-driven systems",
+        "- PostgreSQL, Redis",
+        "- Distributed systems",
+        "",
+        "umar@backendumar:~$ location",
+        "Germany 🇩🇪",
+        "",
+        "umar@backendumar:~$ cat mission.txt",
+        "Design systems that scale, fail gracefully, and perform under pressure.",
+        ""
+    ];
+
+    const output = document.getElementById("terminal-output");
+    let line = 0, char = 0;
+
+    function type() {
+        if (line < lines.length) {
+            if (char < lines[line].length) {
+                output.textContent += lines[line][char++];
+                setTimeout(type, 22);
+            } else {
+                output.textContent += "\n";
+                line++;
+                char = 0;
+                setTimeout(type, 260);
+            }
+        }
+    }
+    type();
+
+    /* FADE-UP ANIMATIONS */
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.15 }
+    );
+
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
 </html>
