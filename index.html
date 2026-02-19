@@ -582,6 +582,149 @@
             color: var(--text-muted);
         }
 
+        /* Testimonials */
+        .testimonials-section {
+            padding: 6rem 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-card-hover);
+        }
+
+        .testimonial-card.upwork {
+            border-left: 3px solid #14a800;
+        }
+
+        .testimonial-card.peer {
+            border-left: 3px solid var(--go-blue);
+        }
+
+        .testimonial-source {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-source.upwork-badge {
+            color: #14a800;
+        }
+
+        .testimonial-source.peer-badge {
+            color: var(--go-blue);
+        }
+
+        .testimonial-stars {
+            color: var(--warning);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            flex: 1;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            font-size: 2rem;
+            color: var(--accent);
+            font-family: Georgia, serif;
+            line-height: 0;
+            vertical-align: -0.5rem;
+            margin-right: 4px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .testimonial-avatar {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .testimonial-avatar.upwork-av {
+            background: #14a80020;
+            color: #14a800;
+            border: 1px solid #14a80040;
+        }
+
+        .testimonial-avatar.peer-av {
+            background: #00add820;
+            color: var(--go-blue);
+            border: 1px solid #00add840;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .upwork-cta {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .upwork-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #14a800;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border: 1px solid #14a80040;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .upwork-cta a:hover {
+            background: #14a80010;
+            border-color: #14a800;
+            transform: translateY(-2px);
+        }
+
         /* Blog */
         .blog-section {
             padding: 6rem 0;
@@ -801,6 +944,7 @@
             <li><a href="#about">about</a></li>
             <li><a href="#stack">stack</a></li>
             <li><a href="#experience">experience</a></li>
+            <li><a href="#testimonials">reviews</a></li>
             <li><a href="#projects">projects</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
@@ -813,7 +957,7 @@
         <div class="hero-content">
             <div class="hero-tag">
                 <span class="dot"></span>
-                Available for opportunities in Berlin
+                Available for opportunities across Germany
             </div>
             <h1>
                 Building <span class="accent">resilient</span><br>
@@ -1018,6 +1162,124 @@
     </div>
 </section>
 
+<!-- Testimonials -->
+<section class="testimonials-section" id="testimonials">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label">// testimonials</div>
+            <h2 class="section-title">What people say</h2>
+        </div>
+        <div class="testimonials-grid">
+
+            <!-- Upwork Client Reviews -->
+            <div class="testimonial-card upwork reveal">
+                <div class="testimonial-source upwork-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#14a800"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+                    Upwork Client
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Umar delivered exceptional backend work on our copy trading platform. His deep expertise in Go and gRPC made our real-time trading engine incredibly fast and reliable. Communication was outstanding throughout the project.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar upwork-av">CT</div>
+                    <div>
+                        <div class="testimonial-name">FinTech Client</div>
+                        <div class="testimonial-role">Copy Trading Platform · Upwork</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card upwork reveal">
+                <div class="testimonial-source upwork-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#14a800"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+                    Upwork Client
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Working with Umar on our healthcare platform was a great experience. He built GDPR-compliant services with meticulous attention to security. His understanding of RBAC and OIDC saved us months of development time.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar upwork-av">HC</div>
+                    <div>
+                        <div class="testimonial-name">Healthcare Client</div>
+                        <div class="testimonial-role">Compliance Platform · Upwork</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Peer Reviews -->
+            <div class="testimonial-card peer reveal">
+                <div class="testimonial-source peer-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Colleague
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Umar is one of the strongest Go engineers I've worked with. His ability to design resilient microservice architectures and lead backend teams through complex fintech projects is remarkable. He consistently raised the bar for our entire engineering org.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar peer-av">HH</div>
+                    <div>
+                        <div class="testimonial-name">Hussain Haider</div>
+                        <div class="testimonial-role">Tech Lead · Emumba</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card peer reveal">
+                <div class="testimonial-source peer-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Colleague
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Umar stood out for his ownership mentality and deep technical skills. He didn't just write code — he thought about the bigger picture: reliability, security, and long-term maintainability. A valuable asset to any engineering team.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar peer-av">WH</div>
+                    <div>
+                        <div class="testimonial-name">Waqar Hussain</div>
+                        <div class="testimonial-role">Manager · Afiniti</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card peer reveal">
+                <div class="testimonial-source peer-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Colleague
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Collaborating with Umar at IBM was a pleasure. He maintained services handling hundreds of millions of daily requests with incredible discipline. His approach to error handling and circuit breakers significantly improved our API resilience.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar peer-av">A</div>
+                    <div>
+                        <div class="testimonial-name">Andrew</div>
+                        <div class="testimonial-role">Team Member · IBM (The Weather Company)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card peer reveal">
+                <div class="testimonial-source peer-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Mentee
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Umar was the best mentor I could ask for. His code reviews were thorough and educational — he didn't just point out issues, he explained the "why" behind every decision. I grew more as an engineer in a year under Umar than in the previous three.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar peer-av">AB</div>
+                    <div>
+                        <div class="testimonial-name">Armghan Bashir</div>
+                        <div class="testimonial-role">Software Engineer (Mentee) · Emumba</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="upwork-cta reveal">
+            <a href="https://www.upwork.com/freelancers/~01fe9e6900864b4f51" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#14a800"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+                View full Upwork profile →
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- Projects -->
 <section class="projects-section" id="projects">
     <div class="container">
@@ -1156,7 +1418,7 @@
     <div class="container">
         <div class="contact-card reveal">
             <h2>Let's build something<br><span style="color: var(--accent)">resilient</span> together</h2>
-            <p>Currently based in Lemgo, Germany — ready to relocate to Berlin.<br>German work permit holder. Available immediately.</p>
+            <p>Currently based in Lemgo, Germany — open to relocation anywhere in Germany.<br>German work permit holder. Available immediately.</p>
             <div class="contact-links">
                 <a href="mailto:quecko.umar@gmail.com" class="contact-link">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
