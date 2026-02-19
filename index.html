@@ -1148,8 +1148,8 @@
                 <div class="timeline-role">Senior Software Engineer · Contract · Remote, Germany</div>
                 <div class="timeline-projects">
                     <div class="timeline-project">
-                        <h4>🏦 Real-Time Trading Platform (FinTech)</h4>
-                        <p>Built Go microservices with <span class="highlight">Kafka event streaming</span> and <span class="highlight">sub-millisecond Redis caching</span>. Profiled applications with pprof to eliminate bottlenecks. Managed infra with Terraform & Docker. Achieved <span class="highlight">99.9% uptime</span>.</p>
+                        <h4>🏦 Copy Trading Engine (FinTech)</h4>
+                        <p>Built Go microservices powering a copy trading engine with <span class="highlight">Kafka event streaming</span> and <span class="highlight">sub-millisecond Redis caching</span>. Profiled applications with pprof to eliminate bottlenecks. Managed infra with Terraform & Docker. Achieved <span class="highlight">99.9% uptime</span>.</p>
                     </div>
                     <div class="timeline-project">
                         <h4>🤖 GenAI Agentic Document Platform</h4>
@@ -1349,15 +1349,19 @@
         <div class="projects-grid">
             <a href="https://github.com/UmarFarooq-MP/Loki" target="_blank" class="project-card reveal" style="text-decoration:none; color:inherit;">
                 <div class="project-card-top">
-                    <div class="project-icon">🔥</div>
+                    <div class="project-icon">⚡</div>
                     <span class="project-link">↗</span>
                 </div>
-                <h3>Loki</h3>
-                <p>Implementation of WAL (Write-Ahead Log), snapshotter, and storage engine in Go. Exploring database internals and low-level systems programming.</p>
+                <h3>Loki — Order Matching Engine</h3>
+                <p>High-throughput order matching engine built for maximum TPS. Features a custom Write-Ahead Log (WAL) with inner/outer log separation, snapshotter for state recovery, Red-Black tree for order book management, and RCU-style deletion for lock-free reads. Hot-path is allocation-free. gRPC API with Kafka integration for order broadcasting.</p>
                 <div class="project-tech">
                     <span>Go</span>
                     <span>WAL</span>
-                    <span>Storage Engine</span>
+                    <span>R-B Tree</span>
+                    <span>RCU</span>
+                    <span>gRPC</span>
+                    <span>Kafka</span>
+                    <span>Protobuf</span>
                 </div>
             </a>
 
@@ -1367,11 +1371,13 @@
                     <span class="project-link">↗</span>
                 </div>
                 <h3>BrandsDigger</h3>
-                <p>Go REST API that suggests brand names with available domain checking. External service integrations for domain availability verification.</p>
+                <p>REST API that generates creative brand names using OpenAI based on a business idea, then checks domain availability via the GoDaddy API in real-time. Clean architecture with separate API, service, and config layers. Dockerized for deployment. Live at brandsdigger.com.</p>
                 <div class="project-tech">
                     <span>Go</span>
                     <span>REST API</span>
-                    <span>External APIs</span>
+                    <span>OpenAI</span>
+                    <span>GoDaddy API</span>
+                    <span>Docker</span>
                 </div>
             </a>
 
@@ -1381,12 +1387,13 @@
                     <span class="project-link">↗</span>
                 </div>
                 <h3>Coinstrove</h3>
-                <p>Real-time cryptocurrency price aggregator across multiple exchanges. Built with Go, RabbitMQ for message queuing, and Docker for deployment.</p>
+                <p>Microservice-based cryptocurrency price aggregator. Data service fetches real-time prices from multiple exchanges, publishes via RabbitMQ, and a separate WebSocket service pushes live updates to clients. Designed for horizontal scaling. Work in progress.</p>
                 <div class="project-tech">
                     <span>Go</span>
+                    <span>Microservices</span>
                     <span>RabbitMQ</span>
+                    <span>WebSocket</span>
                     <span>Docker</span>
-                    <span>Real-time</span>
                 </div>
             </a>
 
@@ -1396,7 +1403,7 @@
                     <span class="project-link">↗</span>
                 </div>
                 <h3>Algorand MultiSig</h3>
-                <p>Open source multi-signature signing application for Algorand blockchain. Enables devs to easily spin up multi-sig signing workflows.</p>
+                <p>Open source multi-signature signing application for Algorand blockchain. Enables devs to easily spin up multi-sig signing workflows for secure on-chain transactions.</p>
                 <div class="project-tech">
                     <span>Go</span>
                     <span>Algorand</span>
@@ -1411,7 +1418,7 @@
                     <span class="project-link">↗</span>
                 </div>
                 <h3>P2P-GO</h3>
-                <p>Peer-to-peer networking library in Go for cryptocurrency networks. Implements node discovery, message propagation, and connection management.</p>
+                <p>Peer-to-peer networking library in Go for cryptocurrency networks. Implements node discovery, message propagation, and connection management over TCP/IP.</p>
                 <div class="project-tech">
                     <span>Go</span>
                     <span>P2P</span>
